@@ -17,8 +17,7 @@ resource "aws_instance" "public_instance" {
   subnet_id     = aws_subnet.public_subnet.id
   key_name      = data.aws_key_pair.key.key_name
   vpc_security_group_ids = [aws_security_group.sg_public_instance.id]
-  user_data     = file("/scripts/userdata.sh")
- 
+   
  // Definición nombre tags en base a la lista de la variable instancias:
     tags = {
     /*Utilizando el count:
@@ -42,8 +41,7 @@ resource "aws_instance" "public_instance" {
     subnet_id     = aws_subnet.public_subnet.id
     key_name      = data.aws_key_pair.key.key_name
     vpc_security_group_ids = [aws_security_group.sg_public_instance.id]
-    user_data     = file("/scripts/userdata.sh")
-    
+        
     tags = {
       "Name" ="Monitoreo-${local.sufix}" 
     }
