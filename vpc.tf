@@ -70,7 +70,7 @@ resource "aws_vpc" "vpc_prueba" {
     ip_protocol       = "tcp"
     to_port           = 22
   }
-
+/*
   resource "aws_vpc_security_group_egress_rule" "allow_com_out" {
     security_group_id = aws_security_group.sg_public_instance.id
     cidr_ipv4         = var.sg_ingress_cidr
@@ -80,6 +80,7 @@ resource "aws_vpc" "vpc_prueba" {
     to_port           = 0
     // cidr_ipv6         = ["::/0"]
   }
+*/
 
 
 
