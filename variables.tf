@@ -30,5 +30,12 @@ variable "enable_monitoring" {
     type = bool 
   */
   type = number
+}
+
+variable "access_key" {
+  
+}
+
+variable "secret_key" {
   
 }

@@ -15,12 +15,10 @@ terraform {
 // Declaración de zonas:
 provider "aws" {
   region = "eu-west-3"
+  access_key = var.access_key
+  secret_key = var.secret_key
   default_tags {
     tags = var.tags
   }
 }
 
-provider "aws" {
-  region = "eu-west-2"
-  alias  = "London"
-}
